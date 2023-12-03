@@ -10,4 +10,10 @@ fun main(args: Array<String>) {
         println("Day 2.1: ${Day2().solve1(day2Lines)}")
         println("Day 2.2: ${Day2().solve2(day2Lines)}")
     }
+
+    val day3Lines = object {}.javaClass.getResourceAsStream("day_3_input.txt")?.bufferedReader()?.readLines()
+    day3Lines?.let {
+        println("Day 3.1: ${Day3().solve1(day3Lines)}")
+        println("Day 3.2: ${Day3().solve2(day3Lines)}")
+    }
 }

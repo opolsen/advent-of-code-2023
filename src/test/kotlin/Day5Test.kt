@@ -44,7 +44,7 @@ class Day5Test {
 
         val solution = Day5().solve1(input)
 
-        assertEquals(BigInteger.valueOf(35), solution)
+        assertEquals(35, solution)
     }
 
     @Test
@@ -88,6 +88,6 @@ class Day5Test {
 
         val solution = Day5().solve2(input)
 
-        assertEquals(BigInteger.valueOf(46), solution)
+        assertEquals(46, solution)
     }
 }

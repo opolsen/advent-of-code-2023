@@ -46,20 +46,14 @@ class Day7 {
         }
         var score = 0.0
         val typeBaseScore: Long = 10000000
-        score += typeBaseScore * if (counts.containsValue(5) || jokers == 5) {
-            7
-        } else if (counts.containsValue(4)) {
-            6
-        } else if (((!useJoker || jokers == 0) && counts.containsValue(3) && counts.containsValue(2)) || (useJoker && counts.values.filter { it == 3 }.size == 2)) {
-            5
-        } else if (counts.containsValue(3)) {
-            4
-        } else if (((!useJoker || jokers == 0) && counts.values.filter { it == 2 }.size == 2)) {
-            3
-        } else if (counts.containsValue(2)) {
-            2
-        } else {
-            1
+        score += typeBaseScore * when {
+            counts.containsValue(5) || jokers == 5 -> 7
+            counts.containsValue(4) -> 6
+            (!useJoker || jokers == 0) && counts.containsValue(3) && counts.containsValue(2) || useJoker && counts.values.filter { it == 3 }.size == 2 -> 5
+            counts.containsValue(3) -> 4
+            (!useJoker || jokers == 0) && counts.values.filter { it == 2 }.size == 2 -> 3
+            counts.containsValue(2) -> 2
+            else -> 1
         }
         cards.forEachIndexed { index, c ->
             score += if (c.isDigit()) {

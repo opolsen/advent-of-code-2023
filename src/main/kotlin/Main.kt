@@ -1,25 +1,7 @@
 fun main(args: Array<String>) {
-    val lines = object {}.javaClass.getResourceAsStream("day_1_input.txt")?.bufferedReader()?.readLines()
-    lines?.let {
-        println("Day 1.1: ${Day1().solve1(lines)}")
-        println("Day 1.2: ${Day1().solve2(lines)}")
-    }
-
-    val day2Lines = object {}.javaClass.getResourceAsStream("day_2_input.txt")?.bufferedReader()?.readLines()
-    day2Lines?.let {
-        println("Day 2.1: ${Day2().solve1(day2Lines)}")
-        println("Day 2.2: ${Day2().solve2(day2Lines)}")
-    }
-
-    val day3Lines = object {}.javaClass.getResourceAsStream("day_3_input.txt")?.bufferedReader()?.readLines()
-    day3Lines?.let {
-        println("Day 3.1: ${Day3().solve1(day3Lines)}")
-        println("Day 3.2: ${Day3().solve2(day3Lines)}")
-    }
-
-    val day4Lines = object {}.javaClass.getResourceAsStream("day_4_input.txt")?.bufferedReader()?.readLines()
-    day4Lines?.let {
-        println("Day 4.1: ${Day4().solve1(day4Lines)}")
-        println("Day 4.2: ${Day4().solve2(day4Lines)}")
+    val day8Lines = object {}.javaClass.getResourceAsStream("day_8_input.txt")?.bufferedReader()?.readLines()
+    day8Lines?.let {
+        println("Day 8.1: ${Day8().solve1(day8Lines)}")
+        println("Day 8.2: ${Day8().solve2(day8Lines)}")
     }
 }

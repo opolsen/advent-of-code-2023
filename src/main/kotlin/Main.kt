@@ -1,7 +1,7 @@
 fun main(args: Array<String>) {
-    val lines = object {}.javaClass.getResourceAsStream("day_9_input.txt")?.bufferedReader()?.readLines()
+    val lines = object {}.javaClass.getResourceAsStream("day_11_input.txt")?.bufferedReader()?.readLines()
     lines?.let {
-        println("Day 9.1: ${Day9().solve1(lines)}")
-        println("Day 9.2: ${Day9().solve2(lines)}")
+        println("Day 11.1: ${Day11().solve1(lines)}")
+        println("Day 11.2: ${Day11().solve2(lines, 1000000)}")
     }
 }

@@ -59,6 +59,23 @@ class Day10Test {
     }
 
     @Test
+    fun testSolve2aWithSqueeze() {
+        val input = """
+            ..........
+            .S------7.
+            .|F----7|.
+            .||....||.
+            .||....||.
+            .|L-7F-J|.
+            .|..||..|.
+            .L--JL--J.
+            ..........
+        """.trimIndent().lines()
+        val solution = Day10().solve2(input)
+        assertEquals(4, solution)
+    }
+
+    @Test
     fun testSolve2b() {
         val input = """
             .F----7F7F7F7F-7....
@@ -93,7 +110,4 @@ class Day10Test {
         val solution = Day10().solve2(input)
         assertEquals(10, solution)
     }
-
-
-
 }

@@ -21,4 +21,25 @@ class Day14Test {
 
         assertEquals(136, solution)
     }
+
+    @Test
+    fun testSolve2() {
+        val input = """
+            O....#....
+            O.OO#....#
+            .....##...
+            OO.#O....O
+            .O.....O#.
+            O.#..O.#.#
+            ..O..#O..O
+            .......O..
+            #....###..
+            #OO..#....
+        """.trimIndent().lines()
+
+        val solution = Day14().solve2(input, 1000000000)
+
+        assertEquals(64, solution)
+    }
+
 }

@@ -24,4 +24,27 @@ class Day17Test {
 
         assertEquals(102, solution)
     }
+
+    @Test
+    fun solve1b() {
+        val input = """
+            2113411111323
+            3211113515623
+            3255245611154
+            3446585845152
+            4546657867116
+            1438598798414
+            4457876987716
+            3637877979611
+            4654967986881
+            4564679986451
+            1224686865511
+            2546548887715
+            4322674655511
+        """.trimIndent().lines()
+
+        val solution = Day17().solve1(input)
+
+        assertEquals(28, solution)
+    }
 }
